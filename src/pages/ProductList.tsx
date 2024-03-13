@@ -64,12 +64,15 @@ const ProductList: FunctionComponent = () => {
           <Loader />
         </div>
       ) : (
+        <>
+        <h1>Unlock Your Wishlist, One Click at a Time!</h1>
         <div className="container">
           {list.map((product) => {
             return (
-              <div key={product.id} className="product">
+              <div key={product.id} className="product">  
                 <img src={product.thumbnail} alt="product image" />
-                <h3>{product.title}</h3>
+                <div className="info">
+                <h2>{product.title}</h2>
                 <p>Price: {product.price} €</p>
                 {isInCart(product.id) ? (
                   <button
@@ -89,9 +92,11 @@ const ProductList: FunctionComponent = () => {
                   </button>
                 )}
               </div>
+              </div>
             );
           })}
         </div>
+      </>
       )}
     </div>
   );
