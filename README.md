@@ -10,3 +10,6 @@
 
 - npm i axios, react, use-local-storage-state, and all other missing dependencies
 - in the terminal run npm run dev
+
+## Demo
+https://shop-and-cart-app.netlify.app/ 
